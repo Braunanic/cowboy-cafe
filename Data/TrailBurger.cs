@@ -51,6 +51,10 @@ namespace CowboyCafe.Data
         /// if the TrailBurger has Ketchup.
         /// </summary>
         public bool Ketchup { get; set; } = true;
+        /// <summary>
+        /// if the TrailBurger has Bun
+        /// </summary>
+        public bool Bun { get; set; } = true;
 
         /// <summary>
         /// Special instructions for the preparation of the TrailBurger.
@@ -65,6 +69,7 @@ namespace CowboyCafe.Data
                 if (!Mustard) { instructions.Add("hold mustard"); }
                 if (!Ketchup) { instructions.Add("hold ketchup"); }
                 if (!Cheese) { instructions.Add("hold cheese"); }
+                if (!Bun) { instructions.Add("hold bun"); }
                 return instructions;
             }
         }

@@ -70,6 +70,11 @@ namespace CowboyCafe.Data
         /// if the Texas Triple has Egg.
         /// </summary>
         public bool Egg { get; set; } = true;
+
+        /// <summary>
+        /// if the Texas Triple has Bun
+        /// </summary>
+        public bool Bun { get; set; } = true;
         /// <summary>
         /// Special instructions for the preparation of the Texas Triple Burger.
         /// </summary>
@@ -88,6 +93,7 @@ namespace CowboyCafe.Data
                 if (!Mayo) { instructions.Add("hold mayo"); }
                 if (!Bacon) { instructions.Add("hold bacon"); }
                 if (!Egg) { instructions.Add("hold egg"); }
+                if (!Bun) { instructions.Add("hold bun"); }
                 return instructions;
             }
         }

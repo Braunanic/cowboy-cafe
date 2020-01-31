@@ -16,7 +16,7 @@ namespace CowboyCafe.Data
         {
             get
             {
-                return 4.50;
+                return 5.20;
             }
         }
         /// <summary>
@@ -26,7 +26,7 @@ namespace CowboyCafe.Data
         {
             get
             {
-                return 288;
+                return 464;
             }
         }
         private bool cheese = true;
@@ -65,6 +65,10 @@ namespace CowboyCafe.Data
         /// <summary>
         /// Special instructions for the preparation of the Dakota Double Burger.
         /// </summary>
+        /// /// <summary>
+        /// if the Dakota Double has Bun
+        /// </summary>
+        public bool Bun { get; set; } = true;
         public List<string> SpecialInstructions
         {
             get
@@ -78,6 +82,7 @@ namespace CowboyCafe.Data
                 if (!Tomato) { instructions.Add("hold tomato"); }
                 if (!Lettuce) { instructions.Add("hold lettuce"); }
                 if (!Mayo) { instructions.Add("hold mayo"); }
+                if (!Bun) { instructions.Add("hold bun"); }
                 return instructions;
             }
         }
