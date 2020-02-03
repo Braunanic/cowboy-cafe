@@ -7,13 +7,13 @@ namespace CowboyCafe.Data
     /// <summary>
     /// a class representing the TrailBurger entree.
     /// </summary>
-    public class TrailBurger
+    public class TrailBurger : Entree
     {
 
         /// <summary>
         /// The price of TrailBurger.
         /// </summary>
-        public double Price
+        public override double Price
         {
             get
             {
@@ -23,7 +23,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// The calorie count of TrailBurger.
         /// </summary>
-        public uint Calories
+        public override uint Calories
         {
             get
             {
@@ -59,7 +59,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// Special instructions for the preparation of the TrailBurger.
         /// </summary>
-        public List<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {
