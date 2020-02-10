@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+* Author: Nathan Bean
+* Edited By: Nick Braun
+* Class: Side.cs
+* Purpose: Base abstract class for sides in Cowboy Cafe Project.
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 

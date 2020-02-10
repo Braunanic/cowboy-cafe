@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Nick Braun
+* Class: Entree.cs
+* Purpose: Base Class for entrees for cowboy cafe
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 

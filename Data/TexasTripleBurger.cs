@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Nick Braun
+* Class: TexasTripleBurger.cs
+* Purpose: A Class Representing the Texas Triple entree
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 

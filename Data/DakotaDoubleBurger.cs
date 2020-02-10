@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Nick Braun
+* Class: DakotaDoubleBurger.cs
+* Purpose: A Class Representing the Dakota Double Entree
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 

@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+* Author: Nick Braun
+* Class: TrialBurger.cs
+* Purpose: A Class Representing the Trail Burger Entree
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 

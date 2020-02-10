@@ -1,4 +1,10 @@
-﻿using System;
+﻿
+/*
+* Author: Nick Braun
+* Class: PesosPulledPork.cs
+* Purpose: A Class Representing the Pesos Pulled Pork Entree
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 

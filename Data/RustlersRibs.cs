@@ -1,4 +1,10 @@
-﻿using System;
+﻿
+/*
+* Author: Nick Braun
+* Class: RustlersRibs.cs
+* Purpose: A Class Representing the Rustlers Ribs entree
+*/
+using System;
 using System.Collections.Generic;
 using System.Text;
 
