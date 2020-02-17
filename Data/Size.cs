@@ -10,7 +10,10 @@ using System.Text;
 
 namespace CowboyCafe.Data
 {
-    public enum Size
+    /// <summary>
+    /// an enum to represent the sizes.
+    /// </summary>
+   public enum Size
     {
         Small,
         Medium,
