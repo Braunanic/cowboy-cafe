@@ -74,6 +74,9 @@ namespace CowboyCafe.Data
         /// if the Dakota Double has Bun
         /// </summary>
         public bool Bun { get; set; } = true;
+        /// <summary>
+        /// instructions for preparation
+        /// </summary>
         public override List<string> SpecialInstructions
         {
             get
