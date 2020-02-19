@@ -48,8 +48,8 @@ namespace CowboyCafe.Data
             {
                 List<string> instructions = new List<string>();
 
-                if (Lemon) { instructions.Add("add lemon"); }
-                if (!Ice) { instructions.Add("hold ice"); }
+                if (Lemon) { instructions.Add("Add Lemon"); }
+                if (!Ice) { instructions.Add("Hold Ice"); }
                 return instructions;
             }
         }

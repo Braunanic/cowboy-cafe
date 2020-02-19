@@ -23,9 +23,9 @@ namespace CowboyCafe.Data
             {
                 switch (Size)
                 {
-                    case Size.Small: return .06;
-                    case Size.Medium: return 1.1;
-                    case Size.Large: return 1.6;
+                    case Size.Small: return 0.60;
+                    case Size.Medium: return 1.10;
+                    case Size.Large: return 1.60;
                     default: throw new NotImplementedException();
                 }
             }
@@ -52,6 +52,10 @@ namespace CowboyCafe.Data
         /// </summary>
         public bool RoomForCream { get; set; } = false;
         /// <summary>
+        /// if the Coffee is decaf.
+        /// </summary>
+        public bool Decaf { get; set; } = false;
+        /// <summary>
         /// whether the coffee has ice
         /// </summary>
         new public bool Ice {get; set;} = false;
@@ -63,8 +67,9 @@ namespace CowboyCafe.Data
             get
             {
                 List<string> instructions = new List<string>();
-                if (Ice) { instructions.Add("add ice"); }
-                if (RoomForCream) { instructions.Add("Room for cream"); }
+                if (Ice) { instructions.Add("Add Ice"); }
+                if (RoomForCream) { instructions.Add("Room for Cream"); }
+                //if (Decaf) { instructions.Add("Decaf"); }
                 return instructions;
             }
         }
