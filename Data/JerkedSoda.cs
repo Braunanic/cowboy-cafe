@@ -65,5 +65,58 @@ namespace CowboyCafe.Data
                 return instructions;
             }
         }
+
+        /// <summary>
+        /// Returns string representation of this object
+        /// </summary>
+        /// <returns>string describing Jerked Soda</returns>
+        public override string ToString()
+        {
+            switch (Flavor)
+            {
+                case SodaFlavor.BirchBeer:
+                    switch (Size)
+                    {
+                        case Size.Small: return "Small Baked Beans";
+                        case Size.Medium: return "Medium Baked Beans";
+                        case Size.Large: return "Large Baked Beans";
+                        default: throw new NotImplementedException();
+                    }
+                case SodaFlavor.CreamSoda:
+                    switch (Size)
+                    {
+                        case Size.Small: return "Small Baked Beans";
+                        case Size.Medium: return "Medium Baked Beans";
+                        case Size.Large: return "Large Baked Beans";
+                        default: throw new NotImplementedException();
+                    }
+                case SodaFlavor.OrangeSoda
+                    switch (Size)
+                    {
+                        case Size.Small: return "Small Baked Beans";
+                        case Size.Medium: return "Medium Baked Beans";
+                        case Size.Large: return "Large Baked Beans";
+                        default: throw new NotImplementedException();
+                    }
+                case SodaFlavor.RootBeer:
+                    switch (Size)
+                    {
+                        case Size.Small: return "Small Baked Beans";
+                        case Size.Medium: return "Medium Baked Beans";
+                        case Size.Large: return "Large Baked Beans";
+                        default: throw new NotImplementedException();
+                    }
+                case SodaFlavor.Sarsparilla:
+                    switch (Size)
+                    {
+                        case Size.Small: return "Small Baked Beans";
+                        case Size.Medium: return "Medium Baked Beans";
+                        case Size.Large: return "Large Baked Beans";
+                        default: throw new NotImplementedException();
+                    }
+                default: throw new NotImplementedException();
+            }
+            
+        }
     }
 }

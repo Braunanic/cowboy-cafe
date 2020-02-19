@@ -94,5 +94,14 @@ namespace CowboyCafe.Data
                 return instructions;
             }
         }
+
+        /// <summary>
+        /// Returns string representation of this object
+        /// </summary>
+        /// <returns>string describing Dakota Double Burger</returns>
+        public override string ToString()
+        {
+            return "Dakota Double Burger";
+        }
     }
 }

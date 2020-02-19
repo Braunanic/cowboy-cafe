@@ -78,5 +78,14 @@ namespace CowboyCafe.Data
                 return instructions;
             }
         }
+
+        /// <summary>
+        /// Returns string representation of this object
+        /// </summary>
+        /// <returns>string describing TrailBurger</returns>
+        public override string ToString()
+        {
+            return "TrailBurger";
+        }
     }
 }
