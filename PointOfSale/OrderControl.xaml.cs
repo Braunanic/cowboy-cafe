@@ -33,7 +33,7 @@ namespace PointOfSale
             AddCowpokeChiliButton.Click += OnAddCowpokeChiliButtonClicked;
             AddTrailBurgerButton.Click += OnAddTrailBurgerClicked;
             AddDakotaDoubleBurgerButton.Click += OnAddDakotaDoubleBurgerClicked;
-            AddPecosPulledPorkButton.Click += AddPecosPulledPorkButton_Click;
+            AddPecosPulledPorkButton.Click += OnAddPecosPulledPorkButtonClicked;
             AddTexasTripleBurgerButton.Click += OnAddTexasTripleBurgerButtonClicked;
             AddAngryChickenButton.Click += OnAddAngryChickenButtonClicked;
             AddRustlersRibsButton.Click += OnAddRustlersRibsButtonClicked;
@@ -78,7 +78,7 @@ namespace PointOfSale
         /// </summary>
         /// <param name="sender">Button being clicked</param>
         /// <param name="e">evnet arguments being sent</param>
-        private void AddPecosPulledPorkButton_Click(object sender, RoutedEventArgs e)
+        private void OnAddPecosPulledPorkButtonClicked(object sender, RoutedEventArgs e)
         {
             OrderListView.Items.Add(new PecosPulledPork());
         }

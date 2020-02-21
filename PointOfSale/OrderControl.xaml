@@ -29,7 +29,7 @@
             <Button Name="AddDakotaDoubleBurgerButton">Dakota Double Burger</Button>
             <Button Name="AddTexasTripleBurgerButton">Texas Triple Burger</Button>
             <Button Name="AddAngryChickenButton">Angry Chicken</Button>
-            <Button Name="AddPecosPulledPorkButton" Click="AddPecosPulledPorkButton_Click">Peco's Pulled Pork</Button>
+            <Button Name="AddPecosPulledPorkButton">Peco's Pulled Pork</Button>
             <Button Name="AddRustlersRibsButton">Rustler's Ribs</Button>
         </StackPanel>
         <StackPanel Grid.Column="1">
