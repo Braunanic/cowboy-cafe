@@ -85,7 +85,7 @@ namespace CowboyCafe.Data
         /// <returns>string describing TrailBurger</returns>
         public override string ToString()
         {
-            return "TrailBurger";
+            return "Trail Burger";
         }
     }
 }

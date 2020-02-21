@@ -55,9 +55,9 @@ namespace CowboyCafe.Data
         {
             switch (Size)
             {
-                case Size.Small: return "Small Pan De Campo";
-                case Size.Medium: return "Medium Pan De Campo";
-                case Size.Large: return "Large Pan De Campo";
+                case Size.Small: return "Small Pan de Campo";
+                case Size.Medium: return "Medium Pan de Campo";
+                case Size.Large: return "Large Pan de Campo";
                 default: throw new NotImplementedException();
             }
         }
