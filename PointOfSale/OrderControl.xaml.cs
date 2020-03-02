@@ -19,6 +19,26 @@ using CowboyCafe.Data;
 
 namespace PointOfSale
 {
+
+    ///For Data Binding: Bind Order Control to Order instance via dataconext = new Order();
+    ///Bind children -> <ListView ItemsSource ="{Binding Path = Items}"/>
+    ///                     <ListView.ItemsTemplate/>
+    ///                     <DataTemplate>
+    ///                     <Grid>
+    ///                     <TextBox Text="{Binding Path=Subtotal, StringFormat=c}">
+    ///                     </TextBox>
+    ///                     </Grid>
+    ///                     </DataTemplate>
+    ///                     
+    ///
+    ///                 If (DataContext is Order order){
+    ///                 order.Add(new CowpokeChili());                
+    ///                     }
+    ///                     Or
+    ///                     Use NAmes of buttons to write one big switch statement for all
+    ///                     buttons at the same time.
+     
+
     /// <summary>
     /// Interaction logic for OrderControl.xaml
     /// </summary>
@@ -30,6 +50,7 @@ namespace PointOfSale
         public OrderControl()
         {
             InitializeComponent();
+            DataContext = new Order();
             AddCowpokeChiliButton.Click += OnAddCowpokeChiliButtonClicked;
             AddTrailBurgerButton.Click += OnAddTrailBurgerClicked;
             AddDakotaDoubleBurgerButton.Click += OnAddDakotaDoubleBurgerClicked;
