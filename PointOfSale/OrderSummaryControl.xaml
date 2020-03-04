@@ -16,8 +16,21 @@
             <RowDefinition Height="375px"/>
             <RowDefinition Height="30px"/>
         </Grid.RowDefinitions>
-        <TextBox Text="Order: " TextChanged="TextBox_TextChanged"/>
-        <ListView Grid.Row="1" ItemsSource ="{Binding Path = Items}"/>
+        <TextBlock Text="Order: " FontSize="22"/>
+        <ListView Grid.Row="1" ItemsSource ="{Binding Path = Items}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            
+                        </Grid.RowDefinitions>
+                        <TextBlock Text="{Binding Path=Price}"/>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
         <TextBlock Grid.Column="1" Grid.Row="2" Name="Subtotal" Text="{Binding Path=Subtotal, StringFormat=c}"/>
     </Grid>
 </UserControl>

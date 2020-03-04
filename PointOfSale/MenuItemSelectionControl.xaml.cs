@@ -11,6 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using CowboyCafe.Data;
+using Extensions;
 
 namespace PointOfSale
 {
@@ -19,6 +20,7 @@ namespace PointOfSale
     /// </summary>
     public partial class MenuItemSelectionControl : UserControl
     {
+
         public MenuItemSelectionControl()
         {
             InitializeComponent();
@@ -43,36 +45,58 @@ namespace PointOfSale
         /// </summary>
         /// <param name="sender">Button Being Clicked</param>
         /// <param name="e">Event Arguments being sent</param>
-        void OnAddCowpokeChiliButtonClicked(object sender, RoutedEventArgs e)
+        public void OnAddCowpokeChiliButtonClicked(object sender, RoutedEventArgs e)
         {
-            OrderListView.Items.Add(new CowpokeChili());
+            var orderControl = this.FindAncestor<OrderControl>();
+            if (DataContext is Order order)
+            {
+                if (sender is Button)
+                {
+                    var entree = new CowpokeChili();
+                    var screen = new CustomizeCowpokeChili();
+                    screen.DataContext = entree;
+                    order.Add(entree);
+                    orderControl.SwapScreen(screen);
+                }
+            }
+            //OrderListView.Items.Add(new CowpokeChili());
         }
         /// <summary>
         /// Click Event for TrailBurger Button
         /// </summary>
         /// <param name="sender">Button Being Clicked</param>
         /// <param name="e">Event Arguments being sent</param>
-        void OnAddTrailBurgerClicked(object sender, RoutedEventArgs e)
+        public void OnAddTrailBurgerClicked(object sender, RoutedEventArgs e)
         {
-            OrderListView.Items.Add(new TrailBurger());
+            if (DataContext is Order order)
+            {
+                order.Add(new TrailBurger());
+                //orderControl.SwapScreen(new CustomizeCowpokeChili());
+            }
+            //OrderListView.Items.Add(new TrailBurger());
         }
         /// <summary>
         /// Click Event for Dakota Double Burger Button
         /// </summary>
         /// <param name="sender">Button Being Clicked</param>
         /// <param name="e">Event Arguments being sent</param>
-        void OnAddDakotaDoubleBurgerClicked(object sender, RoutedEventArgs e)
+        public void OnAddDakotaDoubleBurgerClicked(object sender, RoutedEventArgs e)
         {
-            OrderListView.Items.Add(new DakotaDoubleBurger());
+            if (DataContext is Order order)
+            {
+                order.Add(new TrailBurger());
+                //orderControl.SwapScreen(new CustomizeCowpokeChili());
+            }
+            //OrderListView.Items.Add(new DakotaDoubleBurger());
         }
         /// <summary>
         /// Click Event for Pecos Pulled Pork Button
         /// </summary>
         /// <param name="sender">Button being clicked</param>
         /// <param name="e">evnet arguments being sent</param>
-        private void OnAddPecosPulledPorkButtonClicked(object sender, RoutedEventArgs e)
+        public void OnAddPecosPulledPorkButtonClicked(object sender, RoutedEventArgs e)
         {
-            OrderListView.Items.Add(new PecosPulledPork());
+            //OrderListView.Items.Add(new PecosPulledPork());
         }
 
         /// <summary>
@@ -80,9 +104,9 @@ namespace PointOfSale
         /// </summary>
         /// <param name="sender">Button being clicked</param>
         /// <param name="e">event arguments being sent</param>
-        private void OnAddTexasTripleBurgerButtonClicked(object sender, RoutedEventArgs e)
+        public void OnAddTexasTripleBurgerButtonClicked(object sender, RoutedEventArgs e)
         {
-            OrderListView.Items.Add(new TexasTripleBurger());
+            //OrderListView.Items.Add(new TexasTripleBurger());
         }
 
         /// <summary>
@@ -90,18 +114,18 @@ namespace PointOfSale
         /// </summary>
         /// <param name="sender">Button being clicked</param>
         /// <param name="e">evnet arguments being sent</param>
-        private void OnAddAngryChickenButtonClicked(object sender, RoutedEventArgs e)
+        public void OnAddAngryChickenButtonClicked(object sender, RoutedEventArgs e)
         {
-            OrderListView.Items.Add(new AngryChicken());
+            //OrderListView.Items.Add(new AngryChicken());
         }
         /// <summary>
         /// Click Event for Rustlers Ribs Button
         /// </summary>
         /// <param name="sender">Button being clicked</param>
         /// <param name="e">evnet arguments being sent</param>
-        private void OnAddRustlersRibsButtonClicked(object sender, RoutedEventArgs e)
+        public void OnAddRustlersRibsButtonClicked(object sender, RoutedEventArgs e)
         {
-            OrderListView.Items.Add(new RustlersRibs());
+            //OrderListView.Items.Add(new RustlersRibs());
         }
 
         /// <summary>
@@ -109,9 +133,9 @@ namespace PointOfSale
         /// </summary>
         /// <param name="sender">Button being clicked</param>
         /// <param name="e">evnet arguments being sent</param>
-        private void OnAddChiliCheeseFriesButtonClicked(object sender, RoutedEventArgs e)
+        public void OnAddChiliCheeseFriesButtonClicked(object sender, RoutedEventArgs e)
         {
-            OrderListView.Items.Add(new ChiliCheeseFries());
+            //OrderListView.Items.Add(new ChiliCheeseFries());
         }
 
         /// <summary>
@@ -119,9 +143,9 @@ namespace PointOfSale
         /// </summary>
         /// <param name="sender">Button being clicked</param>
         /// <param name="e">evnet arguments being sent</param>
-        private void OnAddCornDodgersButtonClicked(object sender, RoutedEventArgs e)
+        public void OnAddCornDodgersButtonClicked(object sender, RoutedEventArgs e)
         {
-            OrderListView.Items.Add(new CornDodgers());
+            //OrderListView.Items.Add(new CornDodgers());
         }
 
         /// <summary>
@@ -129,9 +153,9 @@ namespace PointOfSale
         /// </summary>
         /// <param name="sender">Button being clicked</param>
         /// <param name="e">evnet arguments being sent</param>
-        private void OnAddPanDeCampoButtonClicked(object sender, RoutedEventArgs e)
+        public void OnAddPanDeCampoButtonClicked(object sender, RoutedEventArgs e)
         {
-            OrderListView.Items.Add(new PanDeCampo());
+            //OrderListView.Items.Add(new PanDeCampo());
         }
 
         /// <summary>
@@ -139,9 +163,9 @@ namespace PointOfSale
         /// </summary>
         /// <param name="sender">Button being clicked</param>
         /// <param name="e">evnet arguments being sent</param>
-        private void OnAddBakedBeansButtonClicked(object sender, RoutedEventArgs e)
+        public void OnAddBakedBeansButtonClicked(object sender, RoutedEventArgs e)
         {
-            OrderListView.Items.Add(new BakedBeans());
+            //OrderListView.Items.Add(new BakedBeans());
         }
 
         /// <summary>
@@ -149,9 +173,9 @@ namespace PointOfSale
         /// </summary>
         /// <param name="sender">Button being clicked</param>
         /// <param name="e">evnet arguments being sent</param>
-        private void OnAddJerkedSodaButtonClicked(object sender, RoutedEventArgs e)
+        public void OnAddJerkedSodaButtonClicked(object sender, RoutedEventArgs e)
         {
-            OrderListView.Items.Add(new JerkedSoda());
+            //OrderListView.Items.Add(new JerkedSoda());
         }
 
         /// <summary>
@@ -159,9 +183,9 @@ namespace PointOfSale
         /// </summary>
         /// <param name="sender">Button being clicked</param>
         /// <param name="e">evnet arguments being sent</param>
-        private void OnAddTexasTeaButtonClicked(object sender, RoutedEventArgs e)
+        public void OnAddTexasTeaButtonClicked(object sender, RoutedEventArgs e)
         {
-            OrderListView.Items.Add(new TexasTea());
+            //OrderListView.Items.Add(new TexasTea());
         }
 
         /// <summary>
@@ -169,9 +193,9 @@ namespace PointOfSale
         /// </summary>
         /// <param name="sender">Button being clicked</param>
         /// <param name="e">evnet arguments being sent</param>
-        private void OnAddCowboyCoffeeButtonClicked(object sender, RoutedEventArgs e)
+        public void OnAddCowboyCoffeeButtonClicked(object sender, RoutedEventArgs e)
         {
-            OrderListView.Items.Add(new CowboyCoffee());
+            //OrderListView.Items.Add(new CowboyCoffee());
         }
 
         /// <summary>
@@ -179,9 +203,9 @@ namespace PointOfSale
         /// </summary>
         /// <param name="sender">Button being clicked</param>
         /// <param name="e">evnet arguments being sent</param>
-        private void OnAddWaterButtonClicked(object sender, RoutedEventArgs e)
+        public void OnAddWaterButtonClicked(object sender, RoutedEventArgs e)
         {
-            OrderListView.Items.Add(new Water());
+            //OrderListView.Items.Add(new Water());
         }
     }
 }

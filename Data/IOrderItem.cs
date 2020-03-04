@@ -16,6 +16,6 @@ namespace CowboyCafe.Data
         /// <summary>
         /// Special instructions for the item
         /// </summary>
-        IEnumerable<string> SpecialInstructions { get; set; }
+        IEnumerable<string> SpecialInstructions { get; }
     }
 }

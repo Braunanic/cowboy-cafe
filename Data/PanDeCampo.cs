@@ -61,6 +61,9 @@ namespace CowboyCafe.Data
                 default: throw new NotImplementedException();
             }
         }
-
+        /// <summary>
+        /// Provides special instructions (none for sides)
+        /// </summary>
+        public override IEnumerable<string> SpecialInstructions { get; }
     }
 }

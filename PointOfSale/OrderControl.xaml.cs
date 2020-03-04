@@ -54,22 +54,11 @@ namespace PointOfSale
             itemSelectionButton.Click += OnItemSelectionClicked;
             cancelOrderButton.Click += OnCancelOrderClicked;
             completeOrderButton.Click += OnCompleteOrderClicked;
+        }
 
-           /* AddCowpokeChiliButton.Click += OnAddCowpokeChiliButtonClicked;
-            AddTrailBurgerButton.Click += OnAddTrailBurgerClicked;
-            AddDakotaDoubleBurgerButton.Click += OnAddDakotaDoubleBurgerClicked;
-            AddPecosPulledPorkButton.Click += OnAddPecosPulledPorkButtonClicked;
-            AddTexasTripleBurgerButton.Click += OnAddTexasTripleBurgerButtonClicked;
-            AddAngryChickenButton.Click += OnAddAngryChickenButtonClicked;
-            AddRustlersRibsButton.Click += OnAddRustlersRibsButtonClicked;
-            AddChiliCheeseFriesButton.Click += OnAddChiliCheeseFriesButtonClicked;
-            AddCornDodgersButton.Click += OnAddCornDodgersButtonClicked;
-            AddPanDeCampoButton.Click += OnAddPanDeCampoButtonClicked;
-            AddBakedBeansButton.Click += OnAddBakedBeansButtonClicked;
-            AddJerkedSodaButton.Click += OnAddJerkedSodaButtonClicked;
-            AddTexasTeaButton.Click += OnAddTexasTeaButtonClicked;
-            AddCowboyCoffeeButton.Click += OnAddCowboyCoffeeButtonClicked;
-            AddWaterButton.Click += OnAddWaterButtonClicked;*/
+        public void SwapScreen(UIElement element)
+        {
+            Container.Child = element;
         }
 
         void OnItemSelectionClicked(object sender, RoutedEventArgs e)
@@ -86,150 +75,6 @@ namespace PointOfSale
         {
             this.DataContext = new Order();
         }
-        /* /// <summary>
-         /// Click Event for Cowpoke Chili Button
-         /// </summary>
-         /// <param name="sender">Button Being Clicked</param>
-         /// <param name="e">Event Arguments being sent</param>
-         void OnAddCowpokeChiliButtonClicked(object sender, RoutedEventArgs e)
-         {
-             OrderListView.Items.Add(new CowpokeChili());
-         }
-         /// <summary>
-         /// Click Event for TrailBurger Button
-         /// </summary>
-         /// <param name="sender">Button Being Clicked</param>
-         /// <param name="e">Event Arguments being sent</param>
-         void OnAddTrailBurgerClicked(object sender, RoutedEventArgs e)
-         {
-             OrderListView.Items.Add(new TrailBurger());
-         }
-         /// <summary>
-         /// Click Event for Dakota Double Burger Button
-         /// </summary>
-         /// <param name="sender">Button Being Clicked</param>
-         /// <param name="e">Event Arguments being sent</param>
-         void OnAddDakotaDoubleBurgerClicked(object sender, RoutedEventArgs e)
-         {
-             OrderListView.Items.Add(new DakotaDoubleBurger());
-         }
-         /// <summary>
-         /// Click Event for Pecos Pulled Pork Button
-         /// </summary>
-         /// <param name="sender">Button being clicked</param>
-         /// <param name="e">evnet arguments being sent</param>
-         private void OnAddPecosPulledPorkButtonClicked(object sender, RoutedEventArgs e)
-         {
-             OrderListView.Items.Add(new PecosPulledPork());
-         }
-
-         /// <summary>
-         /// Click Event for Texas Triple Burger Button
-         /// </summary>
-         /// <param name="sender">Button being clicked</param>
-         /// <param name="e">event arguments being sent</param>
-         private void OnAddTexasTripleBurgerButtonClicked(object sender, RoutedEventArgs e)
-         {
-             OrderListView.Items.Add(new TexasTripleBurger());
-         }
-
-         /// <summary>
-         /// Click Event for Angry Chicken Button
-         /// </summary>
-         /// <param name="sender">Button being clicked</param>
-         /// <param name="e">evnet arguments being sent</param>
-         private void OnAddAngryChickenButtonClicked(object sender, RoutedEventArgs e)
-         {
-             OrderListView.Items.Add(new AngryChicken());
-         }
-         /// <summary>
-         /// Click Event for Rustlers Ribs Button
-         /// </summary>
-         /// <param name="sender">Button being clicked</param>
-         /// <param name="e">evnet arguments being sent</param>
-         private void OnAddRustlersRibsButtonClicked(object sender, RoutedEventArgs e)
-         {
-             OrderListView.Items.Add(new RustlersRibs());
-         }
-
-         /// <summary>
-         /// Click Event for Chili Cheese Fries Button
-         /// </summary>
-         /// <param name="sender">Button being clicked</param>
-         /// <param name="e">evnet arguments being sent</param>
-         private void OnAddChiliCheeseFriesButtonClicked(object sender, RoutedEventArgs e)
-         {
-             OrderListView.Items.Add(new ChiliCheeseFries());
-         }
-
-         /// <summary>
-         /// Click Event for Corn Dodgers Button
-         /// </summary>
-         /// <param name="sender">Button being clicked</param>
-         /// <param name="e">evnet arguments being sent</param>
-         private void OnAddCornDodgersButtonClicked(object sender, RoutedEventArgs e)
-         {
-             OrderListView.Items.Add(new CornDodgers());
-         }
-
-         /// <summary>
-         /// Click Event for Pan De Campo Button
-         /// </summary>
-         /// <param name="sender">Button being clicked</param>
-         /// <param name="e">evnet arguments being sent</param>
-         private void OnAddPanDeCampoButtonClicked(object sender, RoutedEventArgs e)
-         {
-             OrderListView.Items.Add(new PanDeCampo());
-         }
-
-         /// <summary>
-         /// Click Event for Baked Beans Button
-         /// </summary>
-         /// <param name="sender">Button being clicked</param>
-         /// <param name="e">evnet arguments being sent</param>
-         private void OnAddBakedBeansButtonClicked(object sender, RoutedEventArgs e)
-         {
-             OrderListView.Items.Add(new BakedBeans());
-         }
-
-         /// <summary>
-         /// Click Event for Jerked Soda Button
-         /// </summary>
-         /// <param name="sender">Button being clicked</param>
-         /// <param name="e">evnet arguments being sent</param>
-         private void OnAddJerkedSodaButtonClicked(object sender, RoutedEventArgs e)
-         {
-             OrderListView.Items.Add(new JerkedSoda());
-         }
-
-         /// <summary>
-         /// Click Event for Texas Tea Button
-         /// </summary>
-         /// <param name="sender">Button being clicked</param>
-         /// <param name="e">evnet arguments being sent</param>
-         private void OnAddTexasTeaButtonClicked(object sender, RoutedEventArgs e)
-         {
-             OrderListView.Items.Add(new TexasTea());
-         }
-
-         /// <summary>
-         /// Click Event for CowboyCoffee Button
-         /// </summary>
-         /// <param name="sender">Button being clicked</param>
-         /// <param name="e">evnet arguments being sent</param>
-         private void OnAddCowboyCoffeeButtonClicked(object sender, RoutedEventArgs e)
-         {
-             OrderListView.Items.Add(new CowboyCoffee());
-         }
-
-         /// <summary>
-         /// Click Event for Water Button
-         /// </summary>
-         /// <param name="sender">Button being clicked</param>
-         /// <param name="e">evnet arguments being sent</param>
-         private void OnAddWaterButtonClicked(object sender, RoutedEventArgs e)
-         {
-             OrderListView.Items.Add(new Water());
-         }*/
+        
     }
 }

@@ -79,12 +79,11 @@ namespace CowboyCafe.Data
         /// <summary>
         /// Special instructions for the preparation of the chili
         /// </summary>
-        public override List<string> SpecialInstructions
+        public override IEnumerable<string> SpecialInstructions
         {
             get
             {
                 var instructions = new List<string>();
-
                 if (!cheese) instructions.Add("hold cheese");
                 if (!sourCream) instructions.Add("hold sour cream");
                 if (!greenOnions) instructions.Add("hold green onions");

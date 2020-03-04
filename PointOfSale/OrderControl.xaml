@@ -16,12 +16,15 @@
 
     <DockPanel>
         <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
-            <Button Name="itemSelectionButton" Content="Item Selection" Click="btnAddProduct_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Width="266" />
-            <Button Name="cancelOrderButton" Content="Cancel Order" Click="btnAddProduct_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Width="266" />
-            <Button Name="completeOrderButton" Content="Complete Order" Click="btnAddProduct_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Width="266" />
+            <Button Name="itemSelectionButton" Content="Item Selection" Click="OnItemSelectionClicked" HorizontalAlignment="Center" VerticalAlignment="Center" Width="266" />
+            <Button Name="cancelOrderButton" Content="Cancel Order" Click="OnCancelOrderClicked" HorizontalAlignment="Center" VerticalAlignment="Center" Width="266" />
+            <Button Name="completeOrderButton" Content="Complete Order" Click="OnCompleteOrderClicked" HorizontalAlignment="Center" VerticalAlignment="Center" Width="266" />
         </StackPanel>
-        <local:OrderSummaryControl DockPanel.Dock="Right" Width="221"/>
-        <local:MenuItemSelectionControl DockPanel.Dock="Bottom"/>
+        <local:OrderSummaryControl  DockPanel.Dock="Right" Width="221" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Border DockPanel.Dock="Bottom" Name="Container">
+            <local:MenuItemSelectionControl />
+        </Border>
+        
     </DockPanel>
 
 

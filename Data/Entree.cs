@@ -12,7 +12,7 @@ namespace CowboyCafe.Data
     /// <summary>
     /// Base class from which all entrees will inherit. 
     /// </summary>
-    public abstract class Entree
+    public abstract class Entree : IOrderItem
     {
         /// <summary>
         /// Will represent the price of the entree.
@@ -25,6 +25,6 @@ namespace CowboyCafe.Data
         /// <summary>
         /// Will represent any special preparation instructions for the entree.
         /// </summary>
-        public abstract List<string> SpecialInstructions { get; }
+        public abstract IEnumerable<string> SpecialInstructions { get; }
     }
 }

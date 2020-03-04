@@ -9,7 +9,7 @@ using System.Text;
 
 namespace CowboyCafe.Data
 {
-    public abstract class Drink
+    public abstract class Drink : IOrderItem
     {
         /// <summary>
         /// Will represent the size of the drink
@@ -30,7 +30,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// Will represent any special preparation instructions for the drink.
         /// </summary>
-        public abstract List<string> SpecialInstructions { get; }
+        public abstract IEnumerable<string> SpecialInstructions { get; }
 
     }
 }

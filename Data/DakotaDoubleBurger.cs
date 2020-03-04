@@ -77,7 +77,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// instructions for preparation
         /// </summary>
-        public override List<string> SpecialInstructions
+        public override IEnumerable<string> SpecialInstructions
         {
             get
             {
