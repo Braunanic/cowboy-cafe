@@ -5,8 +5,46 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PointOfSale"
              mc:Ignorable="d" 
-             d:DesignHeight="400" d:DesignWidth="600">
+             d:DesignHeight="300" d:DesignWidth="400">
+
+    <UserControl.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Height" Value=" 40px"></Setter>
+            <Setter Property="FontSize" Value="15px"></Setter>
+        </Style>
+    </UserControl.Resources>
     <Grid>
-            
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="1">
+            <TextBlock TextAlignment="Center" Background="White" Height="30" HorizontalAlignment="Stretch" FontSize="18">Entree</TextBlock>
+            <Button Name="AddCowpokeChiliButton">Cowpoke Chili</Button>
+            <Button Name="AddTrailBurgerButton">Trail Burger</Button>
+            <Button Name="AddDakotaDoubleBurgerButton">Dakota Double Burger</Button>
+            <Button Name="AddTexasTripleBurgerButton">Texas Triple Burger</Button>
+            <Button Name="AddAngryChickenButton">Angry Chicken</Button>
+            <Button Name="AddPecosPulledPorkButton">Peco's Pulled Pork</Button>
+            <Button Name="AddRustlersRibsButton">Rustler's Ribs</Button>
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <TextBlock TextAlignment="Center" Background="White" Height="30" HorizontalAlignment="Stretch" FontSize="18">Sides</TextBlock>
+            <Button Name="AddCornDodgersButton">Corn Dodgers</Button>
+            <Button Name="AddPanDeCampoButton">Pan De Campo</Button>
+            <Button Name="AddChiliCheeseFriesButton">Chili Cheese Fries</Button>
+            <Button Name="AddBakedBeansButton">Baked Beans</Button>
+        </StackPanel>
+        <StackPanel Grid.Column="2">
+            <TextBlock TextAlignment="Center" Background="White" Height="30" HorizontalAlignment="Stretch" FontSize="18">Drinks</TextBlock>
+            <Button Name="AddTexasTeaButton">Texas Tea</Button>
+            <Button Name="AddJerkedSodaButton">Jerked Soda</Button>
+            <Button Name="AddWaterButton">Water</Button>
+            <Button Name="AddCowboyCoffeeButton">Cowboy Coffee</Button>
+        </StackPanel>
+
     </Grid>
 </UserControl>

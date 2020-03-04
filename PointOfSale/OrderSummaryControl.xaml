@@ -9,12 +9,15 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
-            <ColumnDefinition Width="50px"/>
+            <ColumnDefinition Width="60px"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition/>
-            <RowDefinition Height="350px"/>
-            <RowDefinition/>
+            <RowDefinition Height="375px"/>
+            <RowDefinition Height="30px"/>
         </Grid.RowDefinitions>
+        <TextBox Text="Order: " TextChanged="TextBox_TextChanged"/>
+        <ListView Grid.Row="1" ItemsSource ="{Binding Path = Items}"/>
+        <TextBlock Grid.Column="1" Grid.Row="2" Name="Subtotal" Text="{Binding Path=Subtotal, StringFormat=c}"/>
     </Grid>
 </UserControl>

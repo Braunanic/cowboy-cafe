@@ -12,6 +12,22 @@
             <Setter Property="FontSize" Value="15px"></Setter>
         </Style>
     </UserControl.Resources>
+
+
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+            <Button Name="itemSelectionButton" Content="Item Selection" Click="btnAddProduct_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Width="266" />
+            <Button Name="cancelOrderButton" Content="Cancel Order" Click="btnAddProduct_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Width="266" />
+            <Button Name="completeOrderButton" Content="Complete Order" Click="btnAddProduct_Click" HorizontalAlignment="Center" VerticalAlignment="Center" Width="266" />
+        </StackPanel>
+        <local:OrderSummaryControl DockPanel.Dock="Right" Width="221"/>
+        <local:MenuItemSelectionControl DockPanel.Dock="Bottom"/>
+    </DockPanel>
+
+
+
+</UserControl>
+<!--
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -51,5 +67,5 @@
             <ListView Name="OrderListView"></ListView>
         </StackPanel>
 
-    </Grid>
-</UserControl>
+    </Grid>-->
+
