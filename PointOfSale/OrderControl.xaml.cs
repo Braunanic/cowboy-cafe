@@ -51,6 +51,7 @@ namespace PointOfSale
         {
             InitializeComponent();
             DataContext = new Order();
+
             itemSelectionButton.Click += OnItemSelectionClicked;
             cancelOrderButton.Click += OnCancelOrderClicked;
             completeOrderButton.Click += OnCompleteOrderClicked;

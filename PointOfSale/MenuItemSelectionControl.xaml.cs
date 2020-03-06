@@ -96,7 +96,12 @@ namespace PointOfSale
         /// <param name="e">evnet arguments being sent</param>
         public void OnAddPecosPulledPorkButtonClicked(object sender, RoutedEventArgs e)
         {
-            //OrderListView.Items.Add(new PecosPulledPork());
+            if (DataContext is Order order)
+            {
+                order.Add(new PecosPulledPork());
+                //orderControl.SwapScreen(new CustomizeCowpokeChili());
+            }
+            
         }
 
         /// <summary>
@@ -106,6 +111,11 @@ namespace PointOfSale
         /// <param name="e">event arguments being sent</param>
         public void OnAddTexasTripleBurgerButtonClicked(object sender, RoutedEventArgs e)
         {
+            if (DataContext is Order order)
+            {
+                order.Add(new TexasTripleBurger());
+                //orderControl.SwapScreen(new CustomizeCowpokeChili());
+            }
             //OrderListView.Items.Add(new TexasTripleBurger());
         }
 
@@ -116,6 +126,11 @@ namespace PointOfSale
         /// <param name="e">evnet arguments being sent</param>
         public void OnAddAngryChickenButtonClicked(object sender, RoutedEventArgs e)
         {
+            if (DataContext is Order order)
+            {
+                order.Add(new AngryChicken());
+                //orderControl.SwapScreen(new CustomizeCowpokeChili());
+            }
             //OrderListView.Items.Add(new AngryChicken());
         }
         /// <summary>
@@ -125,6 +140,11 @@ namespace PointOfSale
         /// <param name="e">evnet arguments being sent</param>
         public void OnAddRustlersRibsButtonClicked(object sender, RoutedEventArgs e)
         {
+            if (DataContext is Order order)
+            {
+                order.Add(new RustlersRibs());
+                //orderControl.SwapScreen(new CustomizeCowpokeChili());
+            }
             //OrderListView.Items.Add(new RustlersRibs());
         }
 
@@ -135,6 +155,11 @@ namespace PointOfSale
         /// <param name="e">evnet arguments being sent</param>
         public void OnAddChiliCheeseFriesButtonClicked(object sender, RoutedEventArgs e)
         {
+            if (DataContext is Order order)
+            {
+                order.Add(new ChiliCheeseFries());
+                //orderControl.SwapScreen(new CustomizeCowpokeChili());
+            }
             //OrderListView.Items.Add(new ChiliCheeseFries());
         }
 
@@ -145,6 +170,11 @@ namespace PointOfSale
         /// <param name="e">evnet arguments being sent</param>
         public void OnAddCornDodgersButtonClicked(object sender, RoutedEventArgs e)
         {
+            if (DataContext is Order order)
+            {
+                order.Add(new CornDodgers());
+                //orderControl.SwapScreen(new CustomizeCowpokeChili());
+            }
             //OrderListView.Items.Add(new CornDodgers());
         }
 
@@ -155,6 +185,11 @@ namespace PointOfSale
         /// <param name="e">evnet arguments being sent</param>
         public void OnAddPanDeCampoButtonClicked(object sender, RoutedEventArgs e)
         {
+            if (DataContext is Order order)
+            {
+                order.Add(new PanDeCampo());
+                //orderControl.SwapScreen(new CustomizeCowpokeChili());
+            }
             //OrderListView.Items.Add(new PanDeCampo());
         }
 
@@ -165,6 +200,11 @@ namespace PointOfSale
         /// <param name="e">evnet arguments being sent</param>
         public void OnAddBakedBeansButtonClicked(object sender, RoutedEventArgs e)
         {
+            if (DataContext is Order order)
+            {
+                order.Add(new BakedBeans());
+                //orderControl.SwapScreen(new CustomizeCowpokeChili());
+            }
             //OrderListView.Items.Add(new BakedBeans());
         }
 
@@ -175,6 +215,11 @@ namespace PointOfSale
         /// <param name="e">evnet arguments being sent</param>
         public void OnAddJerkedSodaButtonClicked(object sender, RoutedEventArgs e)
         {
+            if (DataContext is Order order)
+            {
+                order.Add(new JerkedSoda());
+                //orderControl.SwapScreen(new CustomizeCowpokeChili());
+            }
             //OrderListView.Items.Add(new JerkedSoda());
         }
 
@@ -185,6 +230,11 @@ namespace PointOfSale
         /// <param name="e">evnet arguments being sent</param>
         public void OnAddTexasTeaButtonClicked(object sender, RoutedEventArgs e)
         {
+            if (DataContext is Order order)
+            {
+                order.Add(new TexasTea());
+                //orderControl.SwapScreen(new CustomizeCowpokeChili());
+            }
             //OrderListView.Items.Add(new TexasTea());
         }
 
@@ -195,6 +245,11 @@ namespace PointOfSale
         /// <param name="e">evnet arguments being sent</param>
         public void OnAddCowboyCoffeeButtonClicked(object sender, RoutedEventArgs e)
         {
+            if (DataContext is Order order)
+            {
+                order.Add(new CowboyCoffee());
+                //orderControl.SwapScreen(new CustomizeCowpokeChili());
+            }
             //OrderListView.Items.Add(new CowboyCoffee());
         }
 
@@ -205,6 +260,11 @@ namespace PointOfSale
         /// <param name="e">evnet arguments being sent</param>
         public void OnAddWaterButtonClicked(object sender, RoutedEventArgs e)
         {
+            if (DataContext is Order order)
+            {
+                order.Add(new Water());
+                //orderControl.SwapScreen(new CustomizeCowpokeChili());
+            }
             //OrderListView.Items.Add(new Water());
         }
     }
