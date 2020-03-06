@@ -68,7 +68,7 @@ namespace PointOfSale
         /// <param name="e">Event Arguments being sent</param>
         public void OnAddTrailBurgerClicked(object sender, RoutedEventArgs e)
         {
-            ((Order)DataContext).Add(new TrailBurger());
+        
             if (DataContext is Order order)
             {
                 order.Add(new TrailBurger());

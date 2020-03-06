@@ -16,11 +16,11 @@ namespace CowboyCafe.Data
         /// <summary>
         /// Items in the order
         /// </summary>
-        public List<IOrderItem> Items 
+        public IEnumerable<IOrderItem> Items 
         {
             get
             {
-                return items;
+                return items.ToArray();
             }
         }
         /// <summary>

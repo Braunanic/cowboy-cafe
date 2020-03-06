@@ -19,7 +19,7 @@ namespace Extensions
             var parent = VisualTreeHelper.GetParent(obj);
             if (parent is null){ return null; }
             if (parent is T) { return parent as T; }
-            return FindAncestor<T>(parent as T);
+            return FindAncestor<T>(parent);
         }
     }
 }

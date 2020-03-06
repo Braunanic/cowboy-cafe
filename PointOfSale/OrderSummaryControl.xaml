@@ -17,7 +17,7 @@
             <RowDefinition Height="30px"/>
         </Grid.RowDefinitions>
         <TextBlock Grid.Column="0" Grid.Row="0" FontSize="22">Order:</TextBlock>
-        <ListView Name="OrderItemListBox" Grid.Row="1" ItemsSource ="{Binding Path = Items}">
+        <ListView Name="OrderItemListBox" Grid.Row="1" ItemsSource ="{Binding Path=Items}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid>
