@@ -49,11 +49,10 @@ namespace PointOfSale
         /// </summary>
         public OrderControl()
         {
-            DataContext = new Order();
+           
             InitializeComponent();
-            
+            DataContext = new Order();
             OrderSumm = new OrderSummaryControl();
-
             itemSelectionButton.Click += OnItemSelectionClicked;
             cancelOrderButton.Click += OnCancelOrderClicked;
             completeOrderButton.Click += OnCompleteOrderClicked;
@@ -66,7 +65,7 @@ namespace PointOfSale
 
         void OnItemSelectionClicked(object sender, RoutedEventArgs e)
         {
-
+            Container.Child = new MenuItemSelectionControl();
         }
 
         void OnCancelOrderClicked(object sender, RoutedEventArgs e)

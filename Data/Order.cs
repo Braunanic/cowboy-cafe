@@ -16,7 +16,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// Items in the order
         /// </summary>
-        public IEnumerable<IOrderItem> Items 
+        public List<IOrderItem> Items 
         {
             get
             {
@@ -43,7 +43,7 @@ namespace CowboyCafe.Data
                         total += i.Price;
                     }
                 }
-               // PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
+               
                 return total;
             }
         }
@@ -59,8 +59,11 @@ namespace CowboyCafe.Data
         /// <param name="item">item being added</param>
         public void Add(IOrderItem item)
         {
+            if (item is INotifyPropertyChanged notifier)
+                notifier.PropertyChanged += OnItemPropertyChanged;
             items.Add(item);
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Items"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
         }
 
         /// <summary>
@@ -69,8 +72,20 @@ namespace CowboyCafe.Data
         /// <param name="item">item being removed</param>
         public void Remove(IOrderItem item)
         {
+            if (item is INotifyPropertyChanged notifier)
+                notifier.PropertyChanged -= OnItemPropertyChanged;
             items.Remove(item);
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Items"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
+        }
+
+        private void OnItemPropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Items"));
+            if (e.PropertyName == "Price")
+            {
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
+            }
         }
     }
 }
