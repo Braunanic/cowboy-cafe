@@ -85,7 +85,7 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
-                order.Add(new TrailBurger());
+                order.Add(new DakotaDoubleBurger());
                 //orderControl.SwapScreen(new CustomizeCowpokeChili());
             }
             //OrderListView.Items.Add(new DakotaDoubleBurger());
