@@ -22,7 +22,7 @@ namespace PointOfSale
         public OrderSummaryControl()
         {
             InitializeComponent();
-            OrderItemListBox.ItemsSource = (Order);
+            OrderItemListBox.ItemsSource = ((Order)DataContext).Items;
         }
 
     }
