@@ -49,8 +49,10 @@ namespace PointOfSale
         /// </summary>
         public OrderControl()
         {
-            InitializeComponent();
             DataContext = new Order();
+            InitializeComponent();
+            
+            OrderSumm = new OrderSummaryControl();
 
             itemSelectionButton.Click += OnItemSelectionClicked;
             cancelOrderButton.Click += OnCancelOrderClicked;

@@ -23,6 +23,7 @@ namespace PointOfSale
         public MainWindow()
         {
             InitializeComponent();
+            orderControl = new OrderControl();
         }
     }
 }

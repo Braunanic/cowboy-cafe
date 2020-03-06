@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:PointOfSale"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="250">
+             d:DesignHeight="390" d:DesignWidth="250">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -13,10 +13,10 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition/>
-            <RowDefinition Height="375px"/>
+            <RowDefinition Height="330px"/>
             <RowDefinition Height="30px"/>
         </Grid.RowDefinitions>
-        <TextBlock Text="Order: " FontSize="22"/>
+        <TextBlock Grid.Column="0" Grid.Row="0" FontSize="22">Order:</TextBlock>
         <ListView Name="OrderItemListBox" Grid.Row="1" ItemsSource ="{Binding Path = Items}">
             <ListView.ItemTemplate>
                 <DataTemplate>
@@ -25,11 +25,13 @@
                             <RowDefinition/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="0" Text="{Binding Path=Name}"/>
                         <TextBlock Grid.Row="1" Text="{Binding Path=Price}"/>
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        <TextBlock Grid.Column="0" Grid.Row="2">Subtotal: </TextBlock>
         <TextBlock Grid.Column="1" Grid.Row="2" Name="Subtotal" Text="{Binding Path=Subtotal, StringFormat=c}"/>
     </Grid>
 </UserControl>

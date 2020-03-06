@@ -20,7 +20,7 @@
             <Button Name="cancelOrderButton" Content="Cancel Order" Click="OnCancelOrderClicked" HorizontalAlignment="Center" VerticalAlignment="Center" Width="266" />
             <Button Name="completeOrderButton" Content="Complete Order" Click="OnCompleteOrderClicked" HorizontalAlignment="Center" VerticalAlignment="Center" Width="266" />
         </StackPanel>
-        <local:OrderSummaryControl  DockPanel.Dock="Right" Width="221" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <local:OrderSummaryControl x:Name="OrderSumm"  DockPanel.Dock="Right" Height="390" Width="250" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <Border DockPanel.Dock="Bottom" Name="Container">
             <local:MenuItemSelectionControl />
         </Border>
