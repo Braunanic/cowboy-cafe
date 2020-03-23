@@ -48,5 +48,7 @@ namespace CowboyCafe.Data
         public abstract IEnumerable<string> SpecialInstructions { get; }
 
         public event PropertyChangedEventHandler PropertyChanged;
+
+
     }
 }

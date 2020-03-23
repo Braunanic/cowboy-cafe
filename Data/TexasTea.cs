@@ -49,14 +49,18 @@ namespace CowboyCafe.Data
                 }
             }
         }
+
+        private bool sweet = true;
         /// <summary>
         /// if the Texas Tea has sweetener.
         /// </summary>
-        public bool Sweet { get; set; } = true;
+        public bool Sweet { get { return sweet; } set { sweet = value; NotifyOfPropertyChange("Sweet"); } }
+
+        private bool lemon;
         /// <summary>
         /// if the Texas Tea has a lemon slice.
         /// </summary>
-        public bool Lemon { get; set; } = false;
+        public bool Lemon { get { return lemon; } set { lemon = value; NotifyOfPropertyChange("Lemon"); } }
         /// <summary>
         /// Special instructions for the preparation of the Tea.
         /// </summary>
@@ -67,7 +71,7 @@ namespace CowboyCafe.Data
                 List<string> instructions = new List<string>();
 
                 if (Lemon) { instructions.Add("Add Lemon"); }
-                if (!Sweet) { instructions.Add("hold sweetener"); }
+                //if (!Sweet) { instructions.Add("hold sweetener"); }
                 if (!Ice) { instructions.Add("Hold Ice"); }
                 return instructions;
             }

@@ -68,11 +68,18 @@ namespace PointOfSale
         /// <param name="e">Event Arguments being sent</param>
         public void OnAddTrailBurgerClicked(object sender, RoutedEventArgs e)
         {
-        
+
+            var orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order order)
             {
-                order.Add(new TrailBurger());
-                //orderControl.SwapScreen(new CustomizeCowpokeChili());
+                if (sender is Button)
+                {
+                    var entree = new TrailBurger();
+                    var screen = new CustomizeTrailBurger();
+                    screen.DataContext = entree;
+                    order.Add(entree);
+                    orderControl.SwapScreen(screen);
+                }
             }
             //OrderListView.Items.Add(new TrailBurger());
         }
@@ -83,10 +90,17 @@ namespace PointOfSale
         /// <param name="e">Event Arguments being sent</param>
         public void OnAddDakotaDoubleBurgerClicked(object sender, RoutedEventArgs e)
         {
+            var orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order order)
             {
-                order.Add(new DakotaDoubleBurger());
-                //orderControl.SwapScreen(new CustomizeCowpokeChili());
+                if (sender is Button)
+                {
+                    var entree = new DakotaDoubleBurger();
+                    var screen = new CustomizeDakotaDouble();
+                    screen.DataContext = entree;
+                    order.Add(entree);
+                    orderControl.SwapScreen(screen);
+                }
             }
             //OrderListView.Items.Add(new DakotaDoubleBurger());
         }
@@ -97,12 +111,19 @@ namespace PointOfSale
         /// <param name="e">evnet arguments being sent</param>
         public void OnAddPecosPulledPorkButtonClicked(object sender, RoutedEventArgs e)
         {
+            var orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order order)
             {
-                order.Add(new PecosPulledPork());
-                //orderControl.SwapScreen(new CustomizeCowpokeChili());
+                if (sender is Button)
+                {
+                    var entree = new PecosPulledPork();
+                    var screen = new CustomizePecosPulledPork();
+                    screen.DataContext = entree;
+                    order.Add(entree);
+                    orderControl.SwapScreen(screen);
+                }
             }
-            
+
         }
 
         /// <summary>
@@ -112,10 +133,17 @@ namespace PointOfSale
         /// <param name="e">event arguments being sent</param>
         public void OnAddTexasTripleBurgerButtonClicked(object sender, RoutedEventArgs e)
         {
+            var orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order order)
             {
-                order.Add(new TexasTripleBurger());
-                //orderControl.SwapScreen(new CustomizeCowpokeChili());
+                if (sender is Button)
+                {
+                    var entree = new TexasTripleBurger();
+                    var screen = new CustomizeTexasTriple();
+                    screen.DataContext = entree;
+                    order.Add(entree);
+                    orderControl.SwapScreen(screen);
+                }
             }
             //OrderListView.Items.Add(new TexasTripleBurger());
         }
@@ -127,10 +155,17 @@ namespace PointOfSale
         /// <param name="e">evnet arguments being sent</param>
         public void OnAddAngryChickenButtonClicked(object sender, RoutedEventArgs e)
         {
+            var orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order order)
             {
-                order.Add(new AngryChicken());
-                //orderControl.SwapScreen(new CustomizeCowpokeChili());
+                if (sender is Button)
+                {
+                    var entree = new AngryChicken();
+                    var screen = new CustomizeAngryChicken();
+                    screen.DataContext = entree;
+                    order.Add(entree);
+                    orderControl.SwapScreen(screen);
+                }
             }
             //OrderListView.Items.Add(new AngryChicken());
         }
@@ -144,9 +179,7 @@ namespace PointOfSale
             if (DataContext is Order order)
             {
                 order.Add(new RustlersRibs());
-                //orderControl.SwapScreen(new CustomizeCowpokeChili());
             }
-            //OrderListView.Items.Add(new RustlersRibs());
         }
 
         /// <summary>
@@ -156,12 +189,18 @@ namespace PointOfSale
         /// <param name="e">evnet arguments being sent</param>
         public void OnAddChiliCheeseFriesButtonClicked(object sender, RoutedEventArgs e)
         {
+            var orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order order)
             {
-                order.Add(new ChiliCheeseFries());
-                //orderControl.SwapScreen(new CustomizeCowpokeChili());
+                if (sender is Button)
+                {
+                    var side = new ChiliCheeseFries();
+                    var screen = new CustomizeChiliCheeseFries();
+                    screen.DataContext = side;
+                    order.Add(side);
+                    orderControl.SwapScreen(screen);
+                }
             }
-            //OrderListView.Items.Add(new ChiliCheeseFries());
         }
 
         /// <summary>
@@ -171,12 +210,18 @@ namespace PointOfSale
         /// <param name="e">evnet arguments being sent</param>
         public void OnAddCornDodgersButtonClicked(object sender, RoutedEventArgs e)
         {
+            var orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order order)
             {
-                order.Add(new CornDodgers());
-                //orderControl.SwapScreen(new CustomizeCowpokeChili());
+                if (sender is Button)
+                {
+                    var side = new CornDodgers();
+                    var screen = new CustomizeCornDodgers();
+                    screen.DataContext = side;
+                    order.Add(side);
+                    orderControl.SwapScreen(screen);
+                }
             }
-            //OrderListView.Items.Add(new CornDodgers());
         }
 
         /// <summary>
@@ -186,12 +231,18 @@ namespace PointOfSale
         /// <param name="e">evnet arguments being sent</param>
         public void OnAddPanDeCampoButtonClicked(object sender, RoutedEventArgs e)
         {
+            var orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order order)
             {
-                order.Add(new PanDeCampo());
-                //orderControl.SwapScreen(new CustomizeCowpokeChili());
+                if (sender is Button)
+                {
+                    var side = new PanDeCampo();
+                    var screen = new CustomizePanDeCampo();
+                    screen.DataContext = side;
+                    order.Add(side);
+                    orderControl.SwapScreen(screen);
+                }
             }
-            //OrderListView.Items.Add(new PanDeCampo());
         }
 
         /// <summary>
@@ -201,12 +252,18 @@ namespace PointOfSale
         /// <param name="e">evnet arguments being sent</param>
         public void OnAddBakedBeansButtonClicked(object sender, RoutedEventArgs e)
         {
+            var orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order order)
             {
-                order.Add(new BakedBeans());
-                //orderControl.SwapScreen(new CustomizeCowpokeChili());
+                if (sender is Button)
+                {
+                    var side = new BakedBeans();
+                    var screen = new CustomizeBakedBeans();
+                    screen.DataContext = side;
+                    order.Add(side);
+                    orderControl.SwapScreen(screen);
+                }
             }
-            //OrderListView.Items.Add(new BakedBeans());
         }
 
         /// <summary>
@@ -216,12 +273,18 @@ namespace PointOfSale
         /// <param name="e">evnet arguments being sent</param>
         public void OnAddJerkedSodaButtonClicked(object sender, RoutedEventArgs e)
         {
+            var orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order order)
             {
-                order.Add(new JerkedSoda());
-                //orderControl.SwapScreen(new CustomizeCowpokeChili());
+                if (sender is Button)
+                {
+                    var drink = new JerkedSoda();
+                    var screen = new CustomizeJerkedSoda();
+                    screen.DataContext = drink;
+                    order.Add(drink);
+                    orderControl.SwapScreen(screen);
+                }
             }
-            //OrderListView.Items.Add(new JerkedSoda());
         }
 
         /// <summary>
@@ -231,12 +294,18 @@ namespace PointOfSale
         /// <param name="e">evnet arguments being sent</param>
         public void OnAddTexasTeaButtonClicked(object sender, RoutedEventArgs e)
         {
+            var orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order order)
             {
-                order.Add(new TexasTea());
-                //orderControl.SwapScreen(new CustomizeCowpokeChili());
+                if (sender is Button)
+                {
+                    var drink = new TexasTea();
+                    var screen = new CustomizeTexasTea();
+                    screen.DataContext = drink;
+                    order.Add(drink);
+                    orderControl.SwapScreen(screen);
+                }
             }
-            //OrderListView.Items.Add(new TexasTea());
         }
 
         /// <summary>
@@ -246,12 +315,18 @@ namespace PointOfSale
         /// <param name="e">evnet arguments being sent</param>
         public void OnAddCowboyCoffeeButtonClicked(object sender, RoutedEventArgs e)
         {
+            var orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order order)
             {
-                order.Add(new CowboyCoffee());
-                //orderControl.SwapScreen(new CustomizeCowpokeChili());
+                if (sender is Button)
+                {
+                    var drink = new CowboyCoffee();
+                    var screen = new CustomizeCowboyCoffee();
+                    screen.DataContext = drink;
+                    order.Add(drink);
+                    orderControl.SwapScreen(screen);
+                }
             }
-            //OrderListView.Items.Add(new CowboyCoffee());
         }
 
         /// <summary>
@@ -261,12 +336,18 @@ namespace PointOfSale
         /// <param name="e">evnet arguments being sent</param>
         public void OnAddWaterButtonClicked(object sender, RoutedEventArgs e)
         {
+            var orderControl = this.FindAncestor<OrderControl>();
             if (DataContext is Order order)
             {
-                order.Add(new Water());
-                //orderControl.SwapScreen(new CustomizeCowpokeChili());
+                if (sender is Button)
+                {
+                    var drink = new Water();
+                    var screen = new CustomizeWater();
+                    screen.DataContext = drink;
+                    order.Add(drink);
+                    orderControl.SwapScreen(screen);
+                }
             }
-            //OrderListView.Items.Add(new Water());
         }
     }
 }

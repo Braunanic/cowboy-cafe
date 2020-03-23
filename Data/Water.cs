@@ -34,10 +34,11 @@ namespace CowboyCafe.Data
                 return 0;
             }
         }
+        private bool lemon = false;
         /// <summary>
         /// if the Water has a lemon slice.
         /// </summary>
-        public bool Lemon { get; set; } = false;
+        public bool Lemon { get { return lemon; } set { lemon = value; NotifyOfPropertyChange("Lemon"); } }
 
         /// <summary>
         /// Special instructions for the preparation of the water.

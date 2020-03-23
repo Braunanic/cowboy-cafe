@@ -11,7 +11,6 @@ namespace CowboyCafe.Data
     public class Order : INotifyPropertyChanged
     {
 
-
         private List<IOrderItem> items = new List<IOrderItem>();
         /// <summary>
         /// Items in the order
@@ -26,7 +25,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// Number of the Order being taken.
         /// </summary>
-        public uint OrderNumber { get; } = 1;
+        public static uint OrderNumber { get; set; } = 1;
 
         /// <summary>
         /// Total cost of the order (no tax)
@@ -79,6 +78,11 @@ namespace CowboyCafe.Data
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Subtotal"));
         }
 
+        /// <summary>
+        /// method to notify when a property is changed
+        /// </summary>
+        /// <param name="sender">object sending notifications</param>
+        /// <param name="e">property being changed</param>
         private void OnItemPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Items"));

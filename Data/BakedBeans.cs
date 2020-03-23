@@ -38,7 +38,7 @@ namespace CowboyCafe.Data
             get
             {
                 switch (Size)
-                {
+                { 
                     case Size.Small: return 312;
                     case Size.Medium: return 378;
                     case Size.Large: return 410;

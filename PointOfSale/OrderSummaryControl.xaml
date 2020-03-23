@@ -17,7 +17,8 @@
             <RowDefinition Height="30px"/>
         </Grid.RowDefinitions>
         <TextBlock Grid.Column="0" Grid.Row="0" FontSize="22">Order:</TextBlock>
-        <ListView Name="OrderItemListBox" Grid.Row="1" ItemsSource ="{Binding Path=Items}">
+        <TextBlock Grid.Column="1" Grid.Row="0" FontSize="22" Text="{Binding Path=OrderNumber}"/>
+        <ListView HorizontalContentAlignment="Stretch" Name="OrderItemListBox" Grid.Row="1" Grid.ColumnSpan="2" ItemsSource ="{Binding Path=Items}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid>
@@ -29,9 +30,9 @@
                             <ColumnDefinition/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
-                        <TextBlock Grid.Row="0" Text="{Binding}"/>
-                        <TextBlock Grid.Column="1" Text="{Binding Path=Price, StringFormat=c}"/>
-                        <ListView Grid.Row="1" Grid.ColumnSpan="2" ItemsSource="{Binding Path=SpecialInstructions}"/>
+                        <TextBlock Grid.Row="0" Grid.Column="0" Text="{Binding}"/>
+                        <TextBlock TextAlignment="Right" HorizontalAlignment="Right" VerticalAlignment="Top"  Grid.Column="1" Text="{Binding Path=Price, StringFormat=c}"/>
+                        <ListView BorderThickness="0" Grid.Row="1" Grid.ColumnSpan="2" ItemsSource="{Binding Path=SpecialInstructions}"/>
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>

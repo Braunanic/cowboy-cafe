@@ -41,45 +41,64 @@ namespace CowboyCafe.Data
         public bool Cheese
         {
             get { return cheese; }
-            set { cheese = value; }
+            set { cheese = value;
+                NotifyOfPropertyChange("Cheese");
+            }
         }
+
+        private bool mustard = true;
         /// <summary>
         /// If the Texas Triple has mustard on it.
         /// </summary>
-        public bool Mustard { get; set; } = true;
+        public bool Mustard { get { return mustard; } set { mustard = value; NotifyOfPropertyChange("Mustard"); } }
+
+        private bool pickle = true;
         /// <summary>
         /// if the Texas Triple has pickles.
         /// </summary>
-        public bool Pickle { get; set; } = true;
+        public bool Pickle { get { return pickle; } set { pickle = value; NotifyOfPropertyChange("Pickle"); } }
+
+        private bool ketchup = true;
         /// <summary>
         /// if the Texas Triple has Ketchup.
         /// </summary>
-        public bool Ketchup { get; set; } = true;
+        public bool Ketchup { get { return ketchup; } set { ketchup = value; NotifyOfPropertyChange("Ketchup"); } }
+
+        private bool tomato = true;
         /// <summary>
         /// If the Texas Triple has tomato on it.
         /// </summary>
-        public bool Tomato { get; set; } = true;
+        public bool Tomato { get { return tomato; } set { tomato = value; NotifyOfPropertyChange("Tomato"); } }
+
+        private bool mayo = true;
         /// <summary>
         /// if the Texas Triple has mayo.
         /// </summary>
-        public bool Mayo { get; set; } = true;
+        public bool Mayo { get { return mayo; } set { mayo = value; NotifyOfPropertyChange("Mayo"); } }
+
+        private bool lettuce = true;
         /// <summary>
         /// if the Texas Triple has lettuce.
         /// </summary>
-        public bool Lettuce { get; set; } = true;
+        public bool Lettuce { get { return lettuce; } set { lettuce = value; NotifyOfPropertyChange("Lettuce"); } }
+
+        private bool bacon = true;
         /// <summary>
         /// if the Texas Triple has bacon.
         /// </summary>
-        public bool Bacon { get; set; } = true;
+        public bool Bacon { get { return bacon; } set { bacon = value; NotifyOfPropertyChange("Bacon"); } }
+
+        private bool egg = true;
         /// <summary>
         /// if the Texas Triple has Egg.
         /// </summary>
-        public bool Egg { get; set; } = true;
+        public bool Egg { get { return egg; } set{egg = value; NotifyOfPropertyChange("Egg"); } } 
 
+        private bool bun = true;
         /// <summary>
         /// if the Texas Triple has Bun
         /// </summary>
-        public bool Bun { get; set; } = true;
+        public bool Bun { get { return bun; } set { bun = value; NotifyOfPropertyChange("Bun"); } }
         /// <summary>
         /// Special instructions for the preparation of the Texas Triple Burger.
         /// </summary>

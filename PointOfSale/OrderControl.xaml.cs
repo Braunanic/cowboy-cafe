@@ -54,27 +54,45 @@ namespace PointOfSale
             DataContext = new Order();
             OrderSumm = new OrderSummaryControl();
             itemSelectionButton.Click += OnItemSelectionClicked;
-            cancelOrderButton.Click += OnCancelOrderClicked;
-            completeOrderButton.Click += OnCompleteOrderClicked;
         }
 
+        /// <summary>
+        /// Method to swap screens between elements
+        /// </summary>
+        /// <param name="element">screen being swapped to</param>
         public void SwapScreen(UIElement element)
         {
             Container.Child = element;
         }
 
+        /// <summary>
+        /// Click Event for Item Selected Button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void OnItemSelectionClicked(object sender, RoutedEventArgs e)
         {
             Container.Child = new MenuItemSelectionControl();
         }
 
+        /// <summary>
+        /// Click Event for cancel Order button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void OnCancelOrderClicked(object sender, RoutedEventArgs e)
         {
             this.DataContext = new Order();
         }
 
+        /// <summary>
+        /// Click Event for Complete Order Button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void OnCompleteOrderClicked(object sender, RoutedEventArgs e)
         {
+            Order.OrderNumber++;
             this.DataContext = new Order();
         }
         

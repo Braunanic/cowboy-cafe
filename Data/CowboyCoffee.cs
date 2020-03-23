@@ -47,18 +47,23 @@ namespace CowboyCafe.Data
                 }
             }
         }
+        private bool cream = false;
         /// <summary>
         /// if the Coffee has room for cremae.
         /// </summary>
-        public bool RoomForCream { get; set; } = false;
+        public bool RoomForCream { get { return cream; } set { cream = value; NotifyOfPropertyChange("RoomForCream"); } }
+
+        private bool decaf;
         /// <summary>
         /// if the Coffee is decaf.
         /// </summary>
-        public bool Decaf { get; set; } = false;
+        public bool Decaf { get { return decaf; } set { decaf = value; NotifyOfPropertyChange("Decaf"); } }
+
+        private bool ice = false;
         /// <summary>
         /// whether the coffee has ice
         /// </summary>
-        new public bool Ice {get; set;} = false;
+        new public bool Ice { get { return ice; } set { ice = value; NotifyOfPropertyChange("Ice"); } }
         /// <summary>
         /// Specials instructions for preparation of coffee
         /// </summary>
