@@ -55,9 +55,6 @@ namespace CowboyCafe.Data
         }
 
         private bool tortillaStrips = true;
-
-        
-
         /// <summary>
         /// If the chili is topped with tortilla strips
         /// </summary>
@@ -94,7 +91,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// Special instructions for the preparation of the chili
         /// </summary>
-        public override IEnumerable<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

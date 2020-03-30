@@ -26,7 +26,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// Will represent any special preparation instructions for the entree.
         /// </summary>
-        public abstract IEnumerable<string> SpecialInstructions { get; }
+        public abstract List<string> SpecialInstructions { get; }
 
         /// <summary>
         /// property changed event to implement INotifyPropertyChanged

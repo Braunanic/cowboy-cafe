@@ -65,6 +65,6 @@ namespace CowboyCafe.Data
         /// <summary>
         /// Provides special instructions (none for sides)
         /// </summary>
-        public override IEnumerable<string> SpecialInstructions { get; }
+        public override List<string> SpecialInstructions { get; }
     }
 }

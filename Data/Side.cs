@@ -45,7 +45,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// Provides any special instructions
         /// </summary>
-        public abstract IEnumerable<string> SpecialInstructions { get; }
+        public abstract List<string> SpecialInstructions { get; }
 
         public event PropertyChangedEventHandler PropertyChanged;
 

@@ -44,7 +44,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// Will represent any special preparation instructions for the drink.
         /// </summary>
-        public abstract IEnumerable<string> SpecialInstructions { get; }
+        public abstract List<string> SpecialInstructions { get; }
 
         protected void NotifyOfPropertyChange(string propertyName)
         {

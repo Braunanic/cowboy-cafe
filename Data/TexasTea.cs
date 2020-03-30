@@ -56,7 +56,7 @@ namespace CowboyCafe.Data
         /// </summary>
         public bool Sweet { get { return sweet; } set { sweet = value; NotifyOfPropertyChange("Sweet"); } }
 
-        private bool lemon;
+        private bool lemon = false;
         /// <summary>
         /// if the Texas Tea has a lemon slice.
         /// </summary>
@@ -64,7 +64,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// Special instructions for the preparation of the Tea.
         /// </summary>
-        public override IEnumerable<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {

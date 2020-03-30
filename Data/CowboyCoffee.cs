@@ -53,7 +53,7 @@ namespace CowboyCafe.Data
         /// </summary>
         public bool RoomForCream { get { return cream; } set { cream = value; NotifyOfPropertyChange("RoomForCream"); } }
 
-        private bool decaf;
+        private bool decaf = false;
         /// <summary>
         /// if the Coffee is decaf.
         /// </summary>
@@ -67,7 +67,7 @@ namespace CowboyCafe.Data
         /// <summary>
         /// Specials instructions for preparation of coffee
         /// </summary>
-        public override IEnumerable<string> SpecialInstructions
+        public override List<string> SpecialInstructions
         {
             get
             {
