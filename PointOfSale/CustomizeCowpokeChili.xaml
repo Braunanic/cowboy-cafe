@@ -9,13 +9,21 @@
     <Grid>
         <StackPanel>
             <TextBlock FontSize="36">Cowpoke Chili Customization</TextBlock>
-            <StackPanel Orientation="Horizontal">
-                <CheckBox IsChecked="{Binding Path=GreenOnions}">Green Onions</CheckBox>
-                <CheckBox IsChecked="{Binding Path=Cheese}">Cheese</CheckBox>
-                <CheckBox IsChecked="{Binding Path=SourCream}">Sour Cream</CheckBox>
-                <CheckBox IsChecked="{Binding Path=TortillaStrips}">Tortilla Strips</CheckBox>
+            <StackPanel Height="371">
+                <Viewbox Height="50">
+                    <CheckBox IsChecked="{Binding Path=GreenOnions}" HorizontalAlignment="Left">Green Onions</CheckBox>
+                </Viewbox>
+                <Viewbox Height="50">
+                    <CheckBox IsChecked="{Binding Path=Cheese}" HorizontalAlignment="Left">Cheese</CheckBox>
+                </Viewbox>
+                <Viewbox Height="50">
+                    <CheckBox IsChecked="{Binding Path=SourCream}" HorizontalAlignment="Left">Sour Cream</CheckBox>
+                </Viewbox>
+                <Viewbox Height="50">
+                    <CheckBox IsChecked="{Binding Path=TortillaStrips}" HorizontalAlignment="Left">Tortilla Strips</CheckBox>
+                </Viewbox>
             </StackPanel>
-            
+
         </StackPanel>
     </Grid>
 </UserControl>

@@ -9,9 +9,13 @@
     <Grid>
         <StackPanel>
             <TextBlock FontSize="36">Pecos Pulled Pork Customization</TextBlock>
-            <StackPanel Orientation="Horizontal">
-                <CheckBox IsChecked="{Binding Path=Bread}">Bread</CheckBox>
-                <CheckBox IsChecked="{Binding Path=Pickle}">Pickle</CheckBox>
+            <StackPanel Margin="50,50,50,0"  Height="400">
+                <Viewbox Height="50">
+                    <CheckBox IsChecked="{Binding Path=Bread}">Bread</CheckBox>
+                </Viewbox>
+                <Viewbox Height="50">
+                    <CheckBox IsChecked="{Binding Path=Pickle}">Pickle</CheckBox>
+                </Viewbox>
             </StackPanel>
 
         </StackPanel>

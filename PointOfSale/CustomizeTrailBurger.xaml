@@ -9,12 +9,22 @@
     <Grid>
         <StackPanel>
             <TextBlock FontSize="36" VerticalAlignment="Center" HorizontalAlignment="Center">Trail Burger Customization</TextBlock>
-            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
-                <CheckBox IsChecked="{Binding Path=Pickle}">Pickle</CheckBox>
-                <CheckBox IsChecked="{Binding Path=Cheese}">Cheese</CheckBox>
-                <CheckBox IsChecked="{Binding Path=Ketchup}">Ketchup</CheckBox>
-                <CheckBox IsChecked="{Binding Path=Mustard}">Mustard</CheckBox>
-                <CheckBox IsChecked="{Binding Path=Bun}">Bun</CheckBox>
+            <StackPanel Margin="50,50,50,0"  Height="400">
+                <Viewbox Height="50">
+                    <CheckBox IsChecked="{Binding Path=Pickle}">Pickle</CheckBox>
+                </Viewbox>
+                <Viewbox Height="50">
+                    <CheckBox IsChecked="{Binding Path=Cheese}">Cheese</CheckBox>
+                </Viewbox>
+                <Viewbox Height="50">
+                    <CheckBox IsChecked="{Binding Path=Ketchup}">Ketchup</CheckBox>
+                </Viewbox>
+                <Viewbox Height="50">
+                    <CheckBox IsChecked="{Binding Path=Mustard}">Mustard</CheckBox>
+                </Viewbox>
+                <Viewbox Height="50">
+                    <CheckBox IsChecked="{Binding Path=Bun}">Bun</CheckBox>
+                </Viewbox>
             </StackPanel>
 
         </StackPanel>

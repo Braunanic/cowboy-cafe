@@ -14,8 +14,10 @@
                 <Button Name="MediumButton" Margin="40,0,40,0" Height="50" Width="100" Click="MediumButton_Click" FontSize="20">M</Button>
                 <Button Name="LargeButton" Width="100" Margin="40,0,40,0" Height="50" Click="LargeButton_Click" FontSize="20">L</Button>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <CheckBox IsChecked="{Binding Path=Ice}" Margin="50,50,50,0" Width="50" Height="30">Ice</CheckBox>
+            <StackPanel Margin="50,50,50,0"  Height="80">
+                <Viewbox Height="50">
+                    <CheckBox IsChecked="{Binding Path=Ice}" >Ice</CheckBox>
+                </Viewbox>
             </StackPanel>
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
                 <Button Name ="OrangeButton" Margin="10,30,10,0" Height="50" Width="100" Click="OrangeButton_Click" FontSize="20">Orange</Button>
