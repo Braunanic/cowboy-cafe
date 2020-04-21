@@ -48,6 +48,13 @@ namespace CowboyCafe.Data
         }
 
         /// <summary>
+        /// Returns Total with 16% sales tax factored in
+        /// </summary>
+        public double Total
+        {
+            get { return Subtotal +(Subtotal * 0.16); }
+        }
+        /// <summary>
         /// PropertyChanged Event
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;

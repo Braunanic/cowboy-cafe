@@ -92,8 +92,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         void OnCompleteOrderClicked(object sender, RoutedEventArgs e)
         {
-            Order.OrderNumber++;
-            this.DataContext = new Order();
+            this.SwapScreen(new TransactionControl());
         }
         
     }
